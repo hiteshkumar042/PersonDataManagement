@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PersonDataManagement
 {
@@ -20,6 +17,8 @@ namespace PersonDataManagement
             PersonDataManagement.AgeBetween13to18(listOfPerson);
             //UC4
             PersonDataManagement.AverageAge(listOfPerson);
+            //UC5
+            PersonDataManagement.NameCheck(listOfPerson, "Hitesh");
             Console.ReadLine();
         }
         public static void AddingPersonDetails(List<Person> list)
@@ -36,7 +35,7 @@ namespace PersonDataManagement
 
         public static void DisplayPersonDetails(IEnumerable<Person> list)
         {
-            foreach(Person person in list)
+            foreach (Person person in list)
             {
                 Console.WriteLine(person);
             }

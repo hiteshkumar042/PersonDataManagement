@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PersonDataManagement
 {
@@ -11,7 +9,7 @@ namespace PersonDataManagement
         //UC2- Top 2 Records based on Age
         public static void RetrieveTop2Below60(List<Person> list)
         {
-            var top2=list.Where(p => p.Age < 60).OrderBy(p => p.Age).Take(2);
+            var top2 = list.Where(p => p.Age < 60).OrderBy(p => p.Age).Take(2);
             Console.WriteLine("\nTop 2 Person less than Age 60");
             Program.DisplayPersonDetails(top2);
         }
@@ -26,8 +24,21 @@ namespace PersonDataManagement
         public static void AverageAge(List<Person> list)
         {
             var avgAge = list.Average(p => p.Age);
-            Console.WriteLine("\nAverage Age is : "+Math.Round(avgAge,2));
+            Console.WriteLine("\nAverage Age is : " + Math.Round(avgAge, 2));
         }
+        //UC5- name Check
+        public static void NameCheck(List<Person> list, string input)
+        {
+            var result = list.Where(p => p.Name == input).ToList();
 
+            if (result.Count > 0)
+            {
+                Console.WriteLine("\nName is present");
+            }
+            else
+            {
+                Console.WriteLine("\nName is not present");
+            }
+        }
     }
 }
