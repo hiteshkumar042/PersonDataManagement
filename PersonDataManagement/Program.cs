@@ -19,6 +19,8 @@ namespace PersonDataManagement
             PersonDataManagement.AverageAge(listOfPerson);
             //UC5
             PersonDataManagement.NameCheck(listOfPerson, "Hitesh");
+            //UC6
+            PersonDataManagement.SkipLessThan60(listOfPerson);
             Console.ReadLine();
         }
         public static void AddingPersonDetails(List<Person> list)
