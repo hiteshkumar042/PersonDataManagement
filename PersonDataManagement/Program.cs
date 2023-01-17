@@ -21,6 +21,8 @@ namespace PersonDataManagement
             PersonDataManagement.NameCheck(listOfPerson, "Hitesh");
             //UC6
             PersonDataManagement.SkipLessThan60(listOfPerson);
+            //UC7
+            PersonDataManagement.RemoveName(listOfPerson,"Hitesh");
             Console.ReadLine();
         }
         public static void AddingPersonDetails(List<Person> list)
